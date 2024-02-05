@@ -1,0 +1,298 @@
+/* Include the Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  /*background: #1a1a1a;*/
+  background: rgb(26, 26, 26);
+  background: linear-gradient(0deg, rgba(26, 26, 26, 1) 80%, rgba(68, 0, 68, 1) 100%);
+  background-attachment: fixed;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  /*color: #ff419f;
+  color: #37b339;*/
+  /*color: #12a5d9;*/
+  /*color: #c12243;
+  color: #d97613;*/
+}
+
+html::before,
+html::after,
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  z-index: -1;
+}
+
+html::before {
+  top: -25px;
+  left: -23px;
+  width: 207px;
+  height: 207px;
+  border: #c12243 solid 2px;
+  box-shadow: 0 0 10px rgba(193, 34, 67, 0.7), inset 0 0 10px rgba(193, 34, 67, 0.7);
+  rotate: calc(35deg);
+}
+
+html::after {
+  top: -70px;
+  right: -100px;
+  width: 320px;
+  height: 320px;
+  border: #37b339 solid 2px;
+  box-shadow: 0 0 10px rgba(55, 179, 57, 0.7), inset 0 0 10px rgba(55, 179, 57, 0.7);
+  border-radius: 100%;
+}
+
+body::before {
+  bottom: -86px;
+  left: -77px;
+  width: 223px;
+  height: 223px;
+  border: #3498db solid 2px;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.7), inset 0 0 10px rgba(52, 152, 219, 0.7);
+  transform: skewX(-33deg);
+  rotate: calc(-195deg);
+}
+
+body::after {
+  bottom: -30px;
+  right: -87px;
+  width: 200px;
+  height: 200px;
+  border: #ff419f solid 2px;
+  box-shadow: 0 0 10px rgba(255, 65, 159, 0.7), inset 0 0 10px rgba(255, 65, 159, 0.7);
+  transform: skewX(-33deg);
+  rotate: calc(-166deg);
+}
+
+header,
+footer {
+  text-align: center;
+  margin: 0 auto;
+  width: 600px;
+  padding: 10vh 40px;
+}
+
+footer {
+  padding: 40px;
+}
+
+header h1,
+header h3 {
+  color: #fff;
+  padding: 0;
+  margin: 0 0 10px 0;
+  font-weight: 100;
+  font-family: 'Orbitron', sans-serif;
+}
+
+header h1 {
+  color: #3498db;
+}
+
+header h6,
+footer h6 {
+  margin: 0 0 40px 0;
+  line-height: 1.9;
+  font-size: 12px;
+  font-weight: bold;
+  color: #37b339;
+}
+
+header span,
+footer span {
+  padding: 0 8px;
+}
+
+header a,
+footer a {
+  color: #37b339;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header a:hover,
+footer a:hover {
+  color: #47E549;
+  text-shadow: 0 0 10px rgba(55, 179, 57, 0.7);
+}
+
+header p,
+footer p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 20px;
+  width: calc(100% - 80px);
+}
+
+.grid li {
+  list-style: none;
+}
+
+.grid li a {
+  text-decoration: none;
+/*color: #ff419f;
+  color: #37b339;
+  color: #12a5d9;
+  color: #c12243;
+  color: #d97613;*/
+}
+
+.grid li h4 {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #ff419f;
+}
+
+.grid li p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.grid li p a {
+  color: #ff419f;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.grid li p a:hover {
+  color: #FF66B1;
+  text-shadow: 0 0 10px rgba(255, 65, 159, 0.7);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  header {
+    width: calc(100% - 160px);
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  html::before {
+    /*top: -5%;
+    left: -3%;*/
+    width: 27%;
+    height: 0;
+    padding-bottom: 27%;
+  }
+
+  html::after {
+    /*top: -70px;
+    right: -100px;*/
+    width: 41.6%;
+    height: 0;
+    padding-bottom: 41.6%;
+  }
+
+  body::before {
+    /*bottom: -17%;
+    left: -10%;*/
+    width: 29%;
+    height: 0;
+    padding-bottom: 29%;
+  }
+
+  body::after {
+    /*bottom: -6%;
+    right: -11.3%;*/
+    width: 26%;
+    height: 0;
+    padding-bottom: 26%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    width: calc(100% - 80px);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid a:hover img {
+  transform: scale(1.05);
+}
+
+.grid img {
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Fading In Animation */
+body * {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Delayed Animation for Each Grid Item */
+header {
+  animation-delay: 0.25s;
+}
+
+.grid li:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.grid li:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.grid li:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.grid li:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.grid li:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+.grid li:nth-child(6) {
+  animation-delay: 3s;
+}
+
+.grid li:nth-child(7) {
+  animation-delay: 3.5s;
+}
+
+.grid li:nth-child(8) {
+  animation-delay: 4s;
+}
+
+.grid li:nth-child(9) {
+  animation-delay: 4.5s;
+}
+/* Continue this pattern for each li item */
