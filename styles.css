@@ -173,7 +173,7 @@ footer p {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-  header {
+  header, footer {
     width: calc(100% - 160px);
   }
 
