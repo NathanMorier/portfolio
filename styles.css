@@ -146,11 +146,6 @@ footer p {
 
 .grid li a {
   text-decoration: none;
-/*color: #ff419f;
-  color: #37b339;
-  color: #12a5d9;
-  color: #c12243;
-  color: #d97613;*/
 }
 
 .grid li h4 {
@@ -222,6 +217,13 @@ footer p {
 @media screen and (max-width: 480px) {
   header, footer {
     width: calc(100% - 80px);
+  }
+
+  header span, footer span {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
   }
 
   .grid {
