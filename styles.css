@@ -6,17 +6,11 @@ body {
   line-height: 1.2;
   margin: 0;
   padding: 0;
-  /*background: #1a1a1a;*/
   background: rgb(26, 26, 26);
   background: linear-gradient(0deg, rgba(26, 26, 26, 1) 80%, rgba(68, 0, 68, 1) 100%);
   background-attachment: fixed;
   color: #fff;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  /*color: #ff419f;
-  color: #37b339;*/
-  /*color: #12a5d9;*/
-  /*color: #c12243;
-  color: #d97613;*/
 }
 
 html::before,
@@ -214,16 +208,18 @@ footer p {
   }
 }
 
-@media screen and (max-width: 480px) {
-  header, footer {
-    width: calc(100% - 80px);
-  }
-
+@media screen and (max-width: 640px) {
   header span, footer span {
     display: block;
     overflow: hidden;
     width: 0;
     height: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header, footer {
+    width: calc(100% - 80px);
   }
 
   .grid {
